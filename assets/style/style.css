@@ -20,6 +20,7 @@
   color: var(--theme-white);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  backdrop-filter: blur(0.75rem);
 }
 
 .todo-container {
