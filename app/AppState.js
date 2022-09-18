@@ -13,6 +13,7 @@ class AppState extends EventEmitter {
   rawTime;
   formattedTime = "";
   formattedDate = "";
+  time;
 }
 
 export const appState = new Proxy(new AppState(), {

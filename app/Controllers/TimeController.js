@@ -5,13 +5,13 @@ import { setHTML } from "../Utils/Writer.js";
 
 function _drawTime() {
   // TODO set HTML to correct stuff
-  // setHTML("test", appState.formattedTime);
+  setHTML("test", appState.time.TimeTemplate);
 }
 
 export class TimeController {
   constructor() {
     this.getTime();
-    appState.on("formattedTime", _drawTime);
+    appState.on("time", _drawTime);
     setInterval(this.getTime, 1000);
   }
   async getTime() {

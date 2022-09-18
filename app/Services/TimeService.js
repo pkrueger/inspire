@@ -1,4 +1,5 @@
 import { appState } from "../AppState.js";
+import { Time } from "../Models/Time.js";
 
 class TimeService {
   async getTime() {
@@ -14,6 +15,11 @@ class TimeService {
       now.getMinutes() +
       " " +
       (now.getHours() >= 12 ? "pm" : "am");
+
+    appState.time = new Time({
+      date: appState.formattedDate,
+      time: appState.formattedTime,
+    });
   }
 }
 
