@@ -5,7 +5,7 @@ import { setHTML } from "../Utils/Writer.js";
 
 function _drawTime() {
   // TODO set HTML to correct stuff
-  setHTML("test", appState.time.TimeTemplate);
+  // setHTML("test", appState.time.TimeTemplate);
 }
 
 export class TimeController {

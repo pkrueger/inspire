@@ -10,7 +10,7 @@
 3. JS set for time
    - [x] Use "new Date()"
 4. JS set for quote and author
-   - [ ] Show author on hover
+   - [x] Show author on hover
 5. JS set for TODO list
    - [ ] get on page load
    - [ ] put for saving "checked" attribute
