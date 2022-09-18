@@ -49,12 +49,59 @@
   </head>
 
   <body id="backgroundGoHere">
-    <main id="test">
-      <!-- <div class="weather-container text-center">
-        <div>26&deg; C</div>
-        <div>Clear</div>
-        <div><i class="fa-solid fa-sun"></i></div>
-      </div> -->
+    <main id="test" class="container-fluid">
+      <div class="row">
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 p-3">
+          <div class="todo-container card">
+            <div class="todo-head d-flex justify-content-between">
+              <span>Todos</span>
+              <span>4 left</span>
+            </div>
+
+            <div
+              class="card-body todo-body d-flex flex-column justify-content-between"
+            >
+              <ul id="tasksGoHere" class="scrolling-list">
+                <li
+                  class="task d-flex align-items-center justify-content-between mb-2"
+                >
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="isComplete"
+                    />
+                    <label class="form-check-label" for="isComplete"
+                      >Testing this with lo</label
+                    >
+                  </div>
+                  <i
+                    class="fa-regular fa-square-minus task-delete-button selectable"
+                  ></i>
+                </li>
+              </ul>
+
+              <form
+                class="d-flex justify-content-between"
+                onsubmit="app.tasksController.createTask()"
+              >
+                <input
+                  type="text"
+                  class="task-name-input"
+                  name="taskName"
+                  placeholder="New task"
+                  minlength="3"
+                  maxlength="25"
+                  required
+                />
+                <button type="submit" class="icon-submit-container">
+                  <i class="fa-regular fa-square-plus task-submit"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

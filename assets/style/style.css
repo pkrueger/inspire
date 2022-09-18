@@ -1,4 +1,9 @@
 /* BASIC STYLES HERE */
+:root {
+  --theme-white: rgb(250, 250, 250);
+  --theme-black-transparent: rgba(5, 5, 5, 0.4);
+}
+
 #backgroundGoHere {
   background-repeat: no-repeat;
   background-size: cover;
@@ -6,9 +11,73 @@
 }
 
 .weather-container {
-  background-color: rgba(5, 5, 5, 0.4);
   width: fit-content;
-  color: rgb(250, 250, 250);
-  border-radius: 0.2rem;
+}
+
+.weather-container,
+.todo-container {
+  background-color: var(--theme-black-transparent);
+  color: var(--theme-white);
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+}
+
+.todo-container {
+  min-height: 35vh;
+  width: 100%;
+}
+
+.todo-body {
+  padding: 1rem 0 0.5rem 0;
+}
+
+.scrolling-list {
+  max-height: 24vh;
+  overflow: auto;
+}
+
+.task-delete-button {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.task:hover .task-delete-button {
+  opacity: 1;
+}
+
+.task-name-input {
+  border: 0;
+  background-color: transparent;
+  color: var(--theme-white);
+  font-size: 0.75rem;
+  border-bottom: 0.1rem solid transparent;
+  transition: border-bottom 0.2s ease-in-out;
+  width: 70%;
+}
+
+.task-name-input:focus {
+  border: 0;
+  border-bottom: 0.1rem solid var(--theme-white);
+  outline: 0;
+}
+
+.icon-submit-container {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.task-submit {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  color: var(--theme-white);
+}
+
+.task-name-input:focus + .icon-submit-container .task-submit {
+  opacity: 1;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
