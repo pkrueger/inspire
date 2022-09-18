@@ -15,7 +15,7 @@ class BackgroundsService {
       });
     } while (!res.data.largeImgUrl);
 
-    // console.log(res.data);
+    console.log(res.data);
     appState.background = res.data;
   }
 }

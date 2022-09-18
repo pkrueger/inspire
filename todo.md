@@ -5,10 +5,10 @@
    - [x] display using css with a contain or cover
    - [ ] display image credits
 2. JS set for weather
-   - [ ] Convert temp to C and F
-     - [ ] toggle between
+   - [x] Convert temp to C and F
+     - [x] toggle between
 3. JS set for time
-   - [ ] Use "new Date()"
+   - [x] Use "new Date()"
 4. JS set for quote and author
    - [ ] Show author on hover
 5. JS set for TODO list

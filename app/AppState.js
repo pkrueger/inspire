@@ -9,6 +9,10 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Weather').Weather | null} */
   weather = null;
+
+  rawTime;
+  formattedTime = "";
+  formattedDate = "";
 }
 
 export const appState = new Proxy(new AppState(), {

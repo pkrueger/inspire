@@ -4,8 +4,9 @@ import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
 
 function _drawWeather() {
+  // TODO change where the html is being sent
   // @ts-ignore
-  setHTML("test", appState.weather.WeatherTemplate);
+  // setHTML("test", appState.weather.WeatherTemplate);
 }
 
 export class WeatherController {
