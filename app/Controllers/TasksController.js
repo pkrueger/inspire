@@ -9,11 +9,12 @@ function _drawTasks() {
 
   appState.tasks.forEach((t) => (template += t.TaskTemplate));
   setHTML("tasksGoHere", template);
+  setHTML("tasksIncomplete", appState.tasksIncomplete);
 }
 
 export class TasksController {
   constructor() {
-    appState.on("tasks", _drawTasks);
+    appState.on("tasks", this.countTasks);
     this.getTasks();
   }
   async getTasks() {
@@ -66,5 +67,10 @@ export class TasksController {
       console.error("[toggleCompleted]", error);
       Pop.error(error);
     }
+  }
+
+  countTasks() {
+    tasksService.countTasks();
+    _drawTasks();
   }
 }

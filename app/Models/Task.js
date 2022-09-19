@@ -1,3 +1,5 @@
+import { appState } from "../AppState.js";
+
 export class Task {
   /**
    *
@@ -13,7 +15,7 @@ export class Task {
   get TaskTemplate() {
     return /*html*/ `
     <li
-      class="task d-flex align-items-center justify-content-between mb-2"
+      class="task d-flex align-items-center justify-content-between mb-2 ${this.completed ? "order-1" : ""}"
     >
       <div class="form-check form-check-inline">
         <input

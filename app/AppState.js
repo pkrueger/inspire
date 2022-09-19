@@ -18,6 +18,8 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Task').Task[]} */
   tasks = [];
+
+  tasksIncomplete = 0;
 }
 
 export const appState = new Proxy(new AppState(), {

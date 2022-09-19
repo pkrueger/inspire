@@ -21,7 +21,32 @@ class TasksService {
     appState.tasks = appState.tasks.filter((t) => t.id != id);
   }
 
-  async toggleCompleted(id) {}
+  async toggleCompleted(id) {
+    let task = appState.tasks.find((t) => t.id == id);
+
+    if (task) {
+      task.completed = !task.completed;
+      const res = await SandboxServer.put(`/pkrueger/todos/${id}`, {
+        completed: task.completed,
+      });
+
+      const index = appState.tasks.findIndex((t) => t.id == id);
+      appState.tasks.splice(index, 1, new Task(res.data));
+      appState.emit("tasks");
+    }
+  }
+
+  countTasks() {
+    let counter = 0;
+
+    for (let task of appState.tasks) {
+      if (!task.completed) {
+        counter++;
+      }
+    }
+
+    appState.tasksIncomplete = counter;
+  }
 }
 
 export const tasksService = new TasksService();

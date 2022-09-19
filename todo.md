@@ -13,12 +13,12 @@
    - [x] Show author on hover
 5. JS set for TODO list
    - [x] get on page load
-   - [ ] put for saving "checked" attribute
+   - [x] put for saving "checked" attribute
    - [x] delete tasks
      - [x] confirmation for delete
    - [x] create with form
    - [ ] slide in from right side
      - [ ] overflow for body hidden and translateX for todo element with a cubic bezier
-   - [ ] change order on check so only incomplete tasks show up top
-     - [ ] use bootstrap "order" for this
-   - [ ] show count of incomplete tasks
+   - [x] change order on check so only incomplete tasks show up top
+     - [x] use bootstrap "order" for this
+   - [x] show count of incomplete tasks
