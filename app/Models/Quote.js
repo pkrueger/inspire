@@ -11,8 +11,8 @@ export class Quote {
   get QuoteTemplate() {
     return /*html*/ `
     <div>
-      <h3>${this.quote}</h3>
-      <h6 class="on-hover">- ${this.author}</h6>
+      <h3 class="quote text-shadow">"${this.quote}"</h3>
+      <h6 class="author on-hover text-shadow">- ${this.author}</h6>
     </div>
     `;
   }

@@ -49,43 +49,66 @@
   </head>
 
   <body id="backgroundGoHere">
-    <main id="test" class="container-fluid">
-      <div class="row">
-        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5 p-3">
-          <div class="todo-container card">
-            <div class="todo-head d-flex justify-content-between">
-              <span>Todos</span>
-              <span><span id="tasksIncomplete"></span> left</span>
-            </div>
+    <main class="d-flex flex-column justify-content-between">
+      <!-- SECTION weather stuff -->
+      <section class="d-flex justify-content-end">
+        <div class="m-3" id="weatherModule"></div>
+      </section>
 
-            <div
-              class="card-body todo-body d-flex flex-column justify-content-between"
-            >
-              <ul id="tasksGoHere" class="scrolling-list d-flex flex-column">
-                <!-- NOTE tasks inserted here -->
-              </ul>
+      <!-- SECTION time -->
+      <section class="time-and-date">
+        <div class="text-center" id="timeModule"></div>
+      </section>
 
-              <form
-                class="d-flex justify-content-between"
-                onsubmit="app.tasksController.createTask()"
+      <!-- SECTION quote and todo -->
+      <section class="container-fluid">
+        <div class="row justify-content-between">
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5"></div>
+
+          <div
+            class="col-xl-6 col-md-4 align-self-end mx-auto text-center mb-5"
+          >
+            <div id="quoteModule"></div>
+          </div>
+
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 p-3 pb-1">
+            <div class="todo-container card">
+              <div class="todo-head d-flex justify-content-between">
+                <span class="fs-5">Todos</span>
+                <span class="fs-5"
+                  ><span id="tasksIncomplete"></span> left</span
+                >
+              </div>
+
+              <div
+                class="card-body todo-body d-flex flex-column justify-content-between"
               >
-                <input
-                  type="text"
-                  class="task-name-input"
-                  name="description"
-                  placeholder="New task"
-                  minlength="3"
-                  maxlength="25"
-                  required
-                />
-                <button type="submit" class="icon-submit-container">
-                  <i class="fa-regular fa-square-plus task-submit"></i>
-                </button>
-              </form>
+                <ul id="tasksGoHere" class="scrolling-list d-flex flex-column">
+                  <!-- NOTE tasks inserted here -->
+                </ul>
+
+                <form
+                  class="d-flex justify-content-between"
+                  onsubmit="app.tasksController.createTask()"
+                >
+                  <input
+                    type="text"
+                    class="task-name-input"
+                    name="description"
+                    placeholder="New task"
+                    minlength="3"
+                    maxlength="25"
+                    required
+                  />
+                  <button type="submit" class="icon-submit-container">
+                    <i class="fa-regular fa-square-plus task-submit"></i>
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>

@@ -10,8 +10,8 @@ export class Time {
 
   get TimeTemplate() {
     return /*html*/ `
-    <h1>${this.time}</h1>
-    <h5>${this.date}</h5>
+    <h1 class="time text-shadow">${this.time}</h1>
+    <h5 class="date text-shadow">${this.date}</h5>
     `;
   }
 }

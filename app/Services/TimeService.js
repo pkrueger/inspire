@@ -12,7 +12,7 @@ class TimeService {
     appState.formattedTime =
       (now.getHours() > 12 ? now.getHours() - 12 : now.getHours()) +
       ":" +
-      now.getMinutes() +
+      (now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes()) +
       " " +
       (now.getHours() >= 12 ? "pm" : "am");
 

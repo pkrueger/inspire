@@ -4,8 +4,7 @@ import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
 
 function _drawTime() {
-  // TODO set HTML to correct stuff
-  // setHTML("test", appState.time.TimeTemplate);
+  setHTML("timeModule", appState.time.TimeTemplate);
 }
 
 export class TimeController {

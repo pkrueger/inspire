@@ -4,9 +4,8 @@ import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
 
 function _drawQuote() {
-  // TODO Put this in correct spot in html
   // @ts-ignore
-  // setHTML("test", appState.quote.QuoteTemplate);
+  setHTML("quoteModule", appState.quote.QuoteTemplate);
 }
 
 export class QuotesController {
