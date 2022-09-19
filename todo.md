@@ -17,8 +17,6 @@
    - [x] delete tasks
      - [x] confirmation for delete
    - [x] create with form
-   - [ ] slide in from right side
-     - [ ] overflow for body hidden and translateX for todo element with a cubic bezier
    - [x] change order on check so only incomplete tasks show up top
      - [x] use bootstrap "order" for this
    - [x] show count of incomplete tasks

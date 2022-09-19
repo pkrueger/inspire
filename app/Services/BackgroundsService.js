@@ -7,7 +7,6 @@ class BackgroundsService {
     do {
       res = await SandboxServer.get("/images", {
         params: {
-          category: "animals",
           min_width: 1920,
           min_height: 1080,
           safesearch: true,

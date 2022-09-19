@@ -7,7 +7,7 @@ class TasksService {
     const res = await SandboxServer.get("/pkrueger/todos");
 
     appState.tasks = res.data.map((t) => new Task(t));
-    console.log(res.data);
+    // console.log(res.data);
   }
 
   async createTask(formData) {
